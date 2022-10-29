@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../img/icon.png">
+  <link rel="stylesheet" href="style_agendar.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="../displays/mobile.css" />
+  <title>Agendar Cita</title>
+</head>
+
+
+<body>
+
+  <ul>
+    <li><a class="active" href="../Index/index.html">Inicio</a></li>
+    <li><a href="../agendar_citas/agendar_cita.html">Agendar Cita</a></li>
+    <li><a href="../Farmacia/farmacia.php">Farmacia</a></li>
+<ul class="logout">
+    <li>
+       <a href="../dashboard/destroy.php">
+             <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text">
+                Log Out
+            </span>
+        </a>
+    </li>  
+  </ul>
+  </ul>
+
+   
+<form class="form-register " action="agendar.php" method="POST">
+        <h4>Agendar Cita</h4>
+        <input class="controls" type="text" name="nombre_paciente" placeholder="Ingrese su Nombre completo">
+        <input class="controls" type="mail" name="correo" placeholder="Ingrese su Correo Electronico">
+        <input class="controls" type="tel" name="telefono" placeholder="Telefono contacto">
+        <textarea class="controls" type="text" name="direccion" placeholder="Ingrese su direccion"></textarea>   
+        <input class="controls" type="date" name="fecha_cita" placeholder="Fecha">
+        <input class="controls" type="time" name="hora_cita" placeholder="Fecha">
+        <input class="botons" type="submit" value="Guardar Datos">
+
+    </form>
+
+</body>
+</html>
