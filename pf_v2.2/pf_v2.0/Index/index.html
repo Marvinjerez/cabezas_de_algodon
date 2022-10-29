@@ -1,0 +1,74 @@
+<?php 
+
+$host = "mysql8001.site4now.net";
+$user = "a8cb5a_project";
+$clave = "12481248Mj";
+$bd  = "db_a8cb5a_project";
+
+$conectar = mysqli_connect($host,$user,$clave,$bd);
+
+
+ ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../img/icon.png">
+  <link rel="stylesheet" href="style_index.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="../displays/mobile.css" />
+  <title>Farmacia</title>
+</head>
+<body>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<br>
+    
+	<table>
+		<tr>
+		<h1>Expedientes Medicos</h1>
+			<td>ID</td>
+			<td>Nombre</td>
+			<td>Apellido</td>
+			<td>Correo</td>
+			<td>Fecha De Nacimiento</td>
+			<td>Edad</td>
+			<td>Genero</td>
+			<td>Telefono</td>
+			<td>Tipo De Sangre</td>	
+		</tr>
+
+		<?php 
+
+		$sql="SELECT * from ex_paciente";
+		$result=mysqli_query($conectar,$sql);
+
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['id_paciente'] ?></td>
+			<td><?php echo $mostrar['nombre'] ?></td>
+			<td><?php echo $mostrar['apellido'] ?></td>
+			<td><?php echo $mostrar['correo'] ?></td>
+			<td><?php echo $mostrar['fecha_nacimiento'] ?></td>
+			<td><?php echo $mostrar['edad'] ?></td>
+			<td><?php echo $mostrar['genero'] ?></td>
+			<td><?php echo $mostrar['telefono'] ?></td>
+			<td><?php echo $mostrar['tipo_sangre'] ?></td>
+		</tr>
+	<?php 
+	}
+	 ?>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<?php 
+
+$host = "mysql8001.site4now.net";
+$user = "a8cb5a_project";
+$clave = "12481248Mj";
+$bd  = "db_a8cb5a_project";
+
+$conectar = mysqli_connect($host,$user,$clave,$bd);
+
+
+ ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../img/icon.png">
+  <link rel="stylesheet" href="style_index.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="../displays/mobile.css" />
+  <title>Farmacia</title>
+</head>
+<body>
+
+
+<div class="area"><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="../creacion_usuario/creacion_user.html">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Creacion de Usuario
+                        </span>
+                    </a> 
+                </li>
+
+                <li class="has-subnav">
+                    <a href="../Expediente paciente/ex_paciente.html">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Creacion Expediente Medico
+                        </span>
+                    </a> 
+                </li>
+
+                <li class="has-subnav">
+                    <a href="../Farmacia/agregar_medicamentos.html">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Llenar Inventario
+                        </span>
+                    </a> 
+                </li>
+
+                <li class="has-subnav">
+                    <a href="../Ficha Medica/ficha_medica.html">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Crear Ficha Medica
+                        </span>
+                    </a> 
+                </li>
+
+
+                <li>
+                    <a href="../tablas/tabla_usuario.php">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Tabla Usuarios
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../tablas/tabla_expediente.php">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Tabla Expediente Medico
+                        </span>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="../tablas/tabla_farmacia.php">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Tabla Farmacia
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../tablas/tabla_ficha.php">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Tabla Ficha Medica
+                        </span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="https://drive.google.com/file/d/1jJkowE2rIdN3j8lUhcwBr-twjNmfhVG0/view?usp=sharing">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Manual
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="../Index/index.html">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Vista de Usuarios
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+
+        </nav>
+
+
+        </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<br>
+    
+	<table>
+		<tr>
+		<h1>Expedientes Medicos</h1>
+			<td>ID</td>
+			<td>Nombre</td>
+			<td>Apellido</td>
+			<td>Correo</td>
+			<td>Fecha De Nacimiento</td>
+			<td>Edad</td>
+			<td>Genero</td>
+			<td>Telefono</td>
+			<td>Tipo De Sangre</td>	
+		</tr>
+
+		<?php 
+
+		$sql="SELECT * from ex_paciente";
+		$result=mysqli_query($conectar,$sql);
+
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['id_paciente'] ?></td>
+			<td><?php echo $mostrar['nombre'] ?></td>
+			<td><?php echo $mostrar['apellido'] ?></td>
+			<td><?php echo $mostrar['correo'] ?></td>
+			<td><?php echo $mostrar['fecha_nacimiento'] ?></td>
+			<td><?php echo $mostrar['edad'] ?></td>
+			<td><?php echo $mostrar['genero'] ?></td>
+			<td><?php echo $mostrar['telefono'] ?></td>
+			<td><?php echo $mostrar['tipo_sangre'] ?></td>
+		</tr>
+	<?php 
+	}
+	 ?>
+	</table>
+
+</body>
+</html>

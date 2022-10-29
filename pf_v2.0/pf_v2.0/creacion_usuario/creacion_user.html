@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../img/icon.png">
+  <link rel="stylesheet" href="style_creacion.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="../displays/mobile.css" />
+  <title>Creacion de Usuario</title>
+</head>
+<body>
+
+  <div class="area"><nav class="main-menu">
+    <ul>
+        <li>
+            <a href="">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    Dashboard
+                </span>
+            </a>
+          
+        </li>
+        <li class="has-subnav">
+            <a href="../creacion_usuario/creacion_user.html">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Creacion de Usuario
+                </span>
+            </a> 
+        </li>
+
+        <li class="has-subnav">
+            <a href="../Expediente paciente/ex_paciente.html">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Creacion Expediente Medico
+                </span>
+            </a> 
+        </li>
+
+        <li class="has-subnav">
+            <a href="../Farmacia/agregar_medicamentos.html">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Llenar Inventario
+                </span>
+            </a> 
+        </li>
+
+        <li class="has-subnav">
+            <a href="../Ficha Medica/ficha_medica.html">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Crear Ficha Medica
+                </span>
+            </a> 
+        </li>
+
+
+        <li>
+            <a href="../tablas/tabla_usuario.php">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Tabla Usuarios
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="../tablas/tabla_expediente.php">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Tabla Expediente Medico
+                </span>
+            </a>
+        </li>
+       
+        <li>
+            <a href="../tablas/tabla_farmacia.php">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Tabla Farmacia
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../tablas/tabla_ficha.php">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Tabla Ficha Medica
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../tablas/tabla_citas.php">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Calendario Citas
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://drive.google.com/file/d/1jJkowE2rIdN3j8lUhcwBr-twjNmfhVG0/view?usp=sharing">
+               <i class="fa fa-info fa-2x"></i>
+                <span class="nav-text">
+                    Manual
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="../Index/index.html">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Vista de Usuarios
+                </span>
+            </a>
+        </li>  
+    </ul>
+
+</nav>
+</div>
+
+
+    <form class="form-register " action="creacion.php" method="POST">
+        <h4>Creacion de Usuario</h4>
+        <input class="controls" type="text" name="usuario" placeholder="Ingrese su usuario">
+        <input class="controls" type="password" name="contraseña" placeholder="Ingrese su Contraseña">
+        <input class="controls" type="number" name="id_rol" placeholder="Ingrese el id del Rol">
+        <input class="botons" type="submit" value="Crear Usuario">
+
+    </form>
+    
+
+</body>
+</html>
